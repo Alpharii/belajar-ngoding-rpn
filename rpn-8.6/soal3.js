@@ -4,10 +4,10 @@ function tentukanDeretAritmatika(arr) {
     let result = ""
     for(let i=0; i<arr.length-1; i++){
         result = arr[i+1]-arr[i]
-    } if(result == aritmatika){
-        return true
-    } else {
+    } if(result !== aritmatika){
         return false
+    } else {
+        return true
     }
 }
   

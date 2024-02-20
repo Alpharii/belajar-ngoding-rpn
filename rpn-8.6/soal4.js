@@ -3,10 +3,10 @@ function tentukanDeretGeometri(arr) {
     let result = ""
     for (let i=0; i<arr.length-1; i++){
         result = arr[i+1]/arr[i] 
-    } if (geometri == result){
-        return true
-    } else{
+    } if (geometri !== result){
         return false
+    } else{
+        return true
     }
 }
   
