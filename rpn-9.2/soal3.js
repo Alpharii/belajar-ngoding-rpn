@@ -1,12 +1,14 @@
 function cariMedian(arr) {
-    let jumlah = 0
-    let median = 0
-    for(let i = 0; i<arr.length; i++){
-        jumlah += arr[i]
-    } median = jumlah/arr.length
-    if(median % 1 == 0.5){
-    return median
-    } return Math.round(median)
+    let sort = arr.sort((a, b) => a - b);
+    let indexTengah = sort.length/2
+    for (i = 0; i<sort.length; i++){
+    if (sort.length % 2 == 0){
+        let result = sort [indexTengah-1] + sort[indexTengah]
+        return result/2
+        } else if (sort.length % 2 == 1){
+        return sort [Math.floor(indexTengah)]
+        }
+    }
   }
   
   // TEST CASES
