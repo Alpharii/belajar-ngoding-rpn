@@ -1,8 +1,19 @@
 //DILARANG MENGGUNAKAN METHOD SORT, PELAJARI ALGORITMA SORTING YANG ADA DI GOOGLE
 //saran sih pake bubblesort walau tidak efisien tapi bagus buat belajar sorting
 function urutkanAbjad(str) {
-    // you can only write your code here!
-  }
+  let arr = str.split("");
+  for(i=0; i<arr.length; i++){
+    for(j=0; j<arr.length; j++){
+      if (arr[j]>arr[j+1]){
+        let temp =  arr[j]
+        arr[j] = arr[j+1]
+        arr[j+1] = temp
+      }
+    }
+  } return arr.join('')
+}
+
+    
   
   // TEST CASES
   console.log(urutkanAbjad('hello')); // 'ehllo'

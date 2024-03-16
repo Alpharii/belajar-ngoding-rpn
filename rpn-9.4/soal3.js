@@ -1,7 +1,18 @@
 //TIPS: gunakan method toUpperCase() dan toLowerCase()
 function tukarBesarKecil(kalimat) {
-    // you can only write your code here!
-  }
+  let hurufBesar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  let hurufKecil = hurufBesar.toLowerCase()
+  let result = ""
+  for(i=0; i<kalimat.length; i++){
+    for(j=0; j<hurufBesar.length; j++)
+      if(kalimat[i] === hurufBesar[j]){
+        result += kalimat[i].toLowerCase()
+      } else if (kalimat[i] === hurufKecil[j]){
+        result += kalimat[i].toUpperCase()
+      } result += kalimat[i]
+  } return result
+  } 
+
   
   // TEST CASES
   console.log(tukarBesarKecil('Hello World')); // "hELLO wORLD"

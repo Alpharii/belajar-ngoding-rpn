@@ -8,10 +8,9 @@ karena di bagian 'barian' terdapat b dipisah 3 karakter ari(totalnya 3) dan kete
 Spasi juga dianggap sebagai karakter
 */
 
-function checkAB(num) {
-    // you can only write your code here!
-  }
-  
+function checkAB(str) {
+}
+
   // TEST CASES
   console.log(checkAB('lane borrowed')); // true
   console.log(checkAB('i am sick')); // false
