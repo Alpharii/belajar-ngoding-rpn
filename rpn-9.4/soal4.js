@@ -9,7 +9,45 @@ Spasi juga dianggap sebagai karakter
 */
 
 function checkAB(str) {
+  let num = str.split ('')
+  for(i=0; i<num.length; i++){
+    if(num[i] === 'a' && num[i+4] === 'b'){
+      return true
+    } else if(num [i] === 'b' && num[i+4] ==='a') {
+      return true
+    } 
+  } return false
 }
+
+  // function checkAB(str) {
+  // let hurufA = 0
+  // let hurufB = 0
+  // for(i=0; i<str.length; i++){
+  //   if(str[i] === 'a'){
+  //     hurufA++
+  //   } else if (str[i] === 'b'){
+  //     hurufB++
+  //   } 
+  // } if(hurufA === 0 || hurufB === 0){
+  //   return false
+  // }
+
+  // for (let i = 0; i < str.length; i++) {
+  //   if (str[i] === 'a') {
+  //     for (let j = i + 1; j < str.length; j++) {
+  //       if (str[j] === 'b' && j - i === 4) {
+  //         return true;
+  //       }
+  //     }
+  //   } else if (str[i] === 'b') {
+  //     for (let j = i + 1; j < str.length; j++) {
+  //       if (str[j] === 'a' && j - i === 4) {
+  //         return true;
+  //       }
+  //     }
+  //   }
+  // } return false
+  // }
 
   // TEST CASES
   console.log(checkAB('lane borrowed')); // true
