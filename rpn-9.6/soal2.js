@@ -21,9 +21,34 @@ maka output:
 */
 
 function shoppingTime(memberId, money) {
-    // you can only write your code here!
-  }
-  
+    let uang = money
+    let listPurchased = []
+    if(memberId == '' || memberId === undefined){
+      return "Mohon maaf, toko X hanya berlaku untuk member saja"
+    } if(uang < 50000 || money === undefined){
+      return 'Mohon maaf, uang tidak cukup'
+    }
+    while(uang >= 50000){
+      if(uang >= 1500000){
+        listPurchased.push('Sepatu Stacattu')
+        uang -= 1500000
+      } else if(uang >= 500000){
+        listPurchased.push('Baju Zoro')
+        uang -= 500000
+      } else if(uang >= 250000){
+        listPurchased.push('Baju H&N')
+        uang -= 250000
+      } else if(uang >= 175000){
+        listPurchased.push('Sweater Uniklooh')
+        uang -= 175000
+      }else if(uang >= 50000){
+        listPurchased.push('Casing Handphone')
+        uang -= 50000
+        break
+    }
+  } let result = {memberId: memberId, listPurchased: listPurchased, changeMoney: uang}
+    return result
+}  
   // TEST CASES
   console.log(shoppingTime('1820RzKrnWn08', 2475000));
     //{ memberId: '1820RzKrnWn08',
