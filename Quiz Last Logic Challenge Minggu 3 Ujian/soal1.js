@@ -3,7 +3,17 @@ Implementasikan function deepSum untuk mendapatkan jumlah pertambahan dari angka
 */
 
 function deepSum (arr) {
-    // Code disini
+    let sum = 0
+    if(arr.length === 0){
+      return 'No number'
+    }
+    for(i=0; i<arr.length; i++){
+      for(j=0; j<arr[i].length; j++){
+        for(k=0; k<arr[i][j].length; k++){
+          sum += arr[i][j][k]
+        }
+      }
+    } return sum
   }
   
   //TEST CASE
