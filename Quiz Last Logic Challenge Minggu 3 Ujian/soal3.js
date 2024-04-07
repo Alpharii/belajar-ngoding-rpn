@@ -1,6 +1,38 @@
-function highestScore (students) {
-    // Code disini
+function highestScore(students) {
+  let result = {};
+  let kelas = [];
+
+  //mencari kelas
+  for (let i = 0; i < students.length; i++) {
+    let found = false;
+    for (let j = 0; j < kelas.length; j++) {
+      if (kelas[j] === students[i].class) {
+        found = true;
+        break;
+      }
+    }
+    if (found === false) {
+      kelas.push(students[i].class);
+    }
   }
+  //mengolah data
+  for(i=0; i<kelas.length; i++){
+    let highest = 0
+    let highestStudent;
+    for(j=0; j<students.length; j++){
+      if(kelas[i] === students[j].class){
+        if(students[j].score > highest){
+          highest = students[j].score
+          highestStudent = {
+            name: students[j].name,
+            score: students[j].score
+          }
+        }
+      }
+    } result[kelas[i]] = highestStudent
+  } return result
+}
+  
   
   // TEST CASE
   console.log(highestScore([
