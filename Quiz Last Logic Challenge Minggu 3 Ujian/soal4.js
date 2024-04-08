@@ -20,8 +20,37 @@ Output yang diharapkan berupa Object dengan format sebagai berikut:
 */
 
 function graduates (students) {
-    // Code disini
+    let result = {}
+
+    //mencari kelas
+    let kelas = []
+    for (let i = 0; i < students.length; i++) {
+      let found = false;
+      for (let j = 0; j < kelas.length; j++) {
+        if (kelas[j] === students[i].class) {
+          found = true;
+          break;
+        }
+      }
+      if (found === false) {
+        kelas.push(students[i].class);
+      }
+    } 
+    //cari kelas selesai
+    for(let i = 0; i <kelas.length; i++) {
+      result[kelas[i]] = [];
   }
+    for(let i = 0; i < students.length; i++) {
+      if (students[i].score >= 75) {
+          result[students[i].class].push({
+              name: students[i].name,
+              score: students[i].score
+          });
+      }
+  }
+
+  return result;
+}
   
   console.log(graduates([
     {
