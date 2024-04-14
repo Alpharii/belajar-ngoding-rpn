@@ -9,7 +9,25 @@ Jika input adalah string kosong ('') maka return array kosong
 */
 
 function meleeRangedGrouping (str) {
-    //your code here
+    if(str.length === 0){
+      return []
+    }  
+
+    let ranged = []
+    let melee = []
+    let container = []
+    let hero = str.split(',')
+    for(i=0; i<hero.length; i++){
+      let heroClass = hero[i].split('-')
+      container.push(heroClass)
+    } 
+    for(i=0; i<container.length; i++){
+      if(container[i][1] === 'Ranged'){
+        ranged.push(container[i][0])
+      }  if(container[i][1] === 'Melee'){
+        melee.push(container[i][0])
+      } 
+    } return [ranged, melee]
   }
   
   // TEST CASE
